@@ -1,16 +1,9 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
-    "typecheck": {
-      "cache": true
-    },
-    "build": {
-      "cache": true,
-      "dependsOn": ["typecheck"]
-    },
-    "lint": {
-      "cache": true
-    }
+    "typecheck": { "cache": true },
+    "build": { "cache": true, "dependsOn": ["typecheck"] },
+    "lint": { "cache": true }
   },
   "defaultBase": "master",
   "plugins": [
@@ -24,18 +17,8 @@
         "serveStaticTargetName": "serve-static"
       }
     },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    }
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } }
   ],
-  "generators": {
-    "@nx/react": {
-      "library": {
-        "unitTestRunner": "vitest"
-      }
-    }
-  }
+  "generators": { "@nx/react": { "library": { "unitTestRunner": "vitest" } } },
+  "nxCloudAccessToken": "ZDRkOGYzOWUtMzIxNC00MWFkLTg4ZjItMDZiMWM0NDIxM2I5fHJlYWQtd3JpdGU="
 }
